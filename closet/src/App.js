@@ -1,19 +1,47 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+
+class Filters extends Component{
+  constructor (props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <h2>Filters will go here</h2>
+    );
+  }
+}
+
+class Clothes extends Component{
+  constructor (props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <h2>Clothes will go here</h2>
+    );
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Walk-in</h2>
-        </div>
-        <p className="App-intro">
-          Stop wearing the same terrible outfits
-        </p>
+      <div>
+        <Navbar inverse fixedTop>
+          <Grid>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a href="/">Walk-in</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+          </Grid>
+        </Navbar>
+        <Filters />
       </div>
     );
   }
